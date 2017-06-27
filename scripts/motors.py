@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 #encoding: utf8
 import sys, rospy, math
-from pimouse_ros.msg import MotorFreqs
+from raspimouse_ros_2.msg import MotorFreqs
 from geometry_msgs.msg import Twist
 from std_srvs.srv import Trigger, TriggerResponse
-from pimouse_ros.srv import TimedMotion                                               #追加
+from raspimouse_ros_2.srv import TimedMotion                                               #追加
 
 class Motor():
     def __init__(self):
@@ -90,7 +90,3 @@ if __name__ == '__main__':
             m.set_raw_freq(0,0)
             m.using_cmd_vel = False
         rate.sleep()
-
-# Copyright 2016 Ryuichi Ueda
-# Released under the BSD License.
-# To make line numbers be identical with the book, this statement is written here. Don't move it to the header.
